@@ -48,7 +48,7 @@ Things you may want to cover:
 - has_many :messages
 - has_many :members
 
-## groupsテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -60,14 +60,14 @@ Things you may want to cover:
 - has_many :messages
 - has_many :members
 
-## messagesテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|image|text|null: false|
+|image|text|
 
 ### Association
 - belongs_to :group
