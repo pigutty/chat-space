@@ -52,7 +52,7 @@
       float: left;
       .group{
         padding: 20px;
-        .group-name {
+        .group-name-on-left {
           font-size: 15px;
           font-style: bold;
           color: #ffffff;
@@ -81,7 +81,7 @@
       border-bottom: solid #eeeeee;
       .group-information{
         float: left;
-          .group-name2{
+          .group-name-on-right{
             font-size: 20px;
             color: #333333;
             padding-top: 35px;
@@ -112,7 +112,7 @@
       height: calc(100vh - 100px);
       .content{
         padding-top: 40px;
-        .user-name2{
+        .user-name{
           font-size: 16px;
           font-weight: bold;
           color: #434a54;
