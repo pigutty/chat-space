@@ -1,0 +1,42 @@
+-# %div.header
+
+-# %div.contents
+-# <div class='contents'>
+!!!
+%div.header グループを作成しました
+
+%div.wrapper
+  %div.left-content
+    %div.left-top-content
+      %a user-name
+      %ul.user-menu
+        %li.new-group
+          %a
+            %i.fa.fa-edit
+        %li.user-setting
+          %a
+            %i.fa.fa-cog
+
+    %div.left-bottom-content
+      %div.group
+        %div.group-name group-name
+        %div.alert 注意
+
+  %div.right-content
+    %div.right-top-content
+      %div.group-information
+        %div.group-name2 group-name
+        %div.member-list member
+      %a.edit-button edit
+    %div.right-middle-content
+      %div.content
+        %div.user-name2 user-name
+        %div.date date
+        %div.text text
+    %div.right-bottom-content
+      %form.form
+        %div.message-form
+          %input{ type: "text",placeholder: "type a new message"}
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-image
+        %input.send-form{type: "submit"}

@@ -1,0 +1,196 @@
+
+.header{
+   width: 100%;
+   background-color: #38AEF0;
+   height: 20px;
+   position: fixed;
+   text-align: center;
+   font-size: 15px;
+   line-height: 20px;
+   color: white;
+ }
+
+.wrapper{
+  // display: table;
+  width: 100vw;
+  .left-content{
+    // display: table-cell;
+    // height: 821px;
+    width: 300px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 20px;
+    float: left;
+    .left-top-content{
+      justify-content: space-between;
+      display: flex;
+      width: 100%;
+      height: 100px;
+      background-color: #253141;
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+        a {
+          // display: inline;
+          font-size: 16px;
+          color: #ffffff;
+          font-weight: bold;
+        }
+        ul.user-menu {
+          display: flex;
+          height: 24px;
+          box-sizing: border-box;
+          // display: inline;
+          li.new-group,li.user-setting {
+            margin-left: 0.3rem;
+            box-sizing: border-box;
+            display: list-item;
+            height: 100%;
+          }
+        }
+    }
+    .left-bottom-content{
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      width: 100%;
+      float: left;
+      .group{
+        padding: 20px;
+        .group-name {
+          font-size: 15px;
+          font-style: bold;
+          color: #ffffff;
+          float: left;
+        }
+        .alert{
+          padding-top: 5px;
+          font-size: 11px;      
+          font-style: bold;
+          color: #ffffff;
+          clear: both;
+          float: left;
+        }
+      }
+    }
+  }
+  .right-content{
+    // display: table-cell;
+    float: left;
+    width: calc(100vw - 300px);
+    padding-top: 20px;
+    .right-top-content{
+      box-sizing: border-box;
+      padding-left: 40px;
+      padding-right: 40px;
+      height: 100px;
+      // width: 100%;
+      border-bottom: solid #eeeeee;
+      .group-information{
+        float: left;
+          .group-name2{
+            font-size: 20px;
+            color: #333333;
+            padding-top: 35px;
+          }
+          .member-list{
+            font-size: 12px;
+            color: #999999;
+            padding-top: 15px;
+          }
+        }
+      a.edit-button{
+          float: right;
+          margin-top: 30px;
+          height: 40px;
+          line-height: 40px;
+          border: solid 1px #38AEF0;
+          color: #38AEF0;
+          text-align: center;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+    }
+    .right-middle-content{
+      box-sizing: border-box;
+      padding-top: 6px;
+      padding-left: 40px;
+      padding-right: 40px;
+      height: calc(100vh - 100px);
+      // width: 100%;
+      .content{
+        padding-top: 40px;
+        .user-name2{
+          font-size: 16px;
+          font-weight: bold;
+          color: #434a54;
+          display: inline;
+        }
+        .date{
+          font-size: 12px;
+          color: #999999;
+          display: inline;
+          vertical-align: top;
+        }
+        .text{
+          font-size: 14px;
+          color: #434a54;
+        }
+      }
+    }
+    .right-bottom-content{
+      width: calc(100% - 300px);
+      position: fixed;
+      bottom: 0;
+      height: 90px;
+      background-color: #ddd;
+      .form{
+        // display: table;
+        width: calc(100% - 100px);
+        height: 50px;
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        box-sizing: border-box;
+        .message-form{
+          // display: table-cell;
+          box-sizing: border-box;
+          float: left;
+          width: calc(100% - 150px);
+          height: 50px;
+          position: relative;
+          input[type=text]{
+            padding-left: 10px;
+            height: 100%;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            line-height: 16px; 
+            box-sizing: border-box;
+            border-width: 0;
+          }
+          label{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            bottom: 10px;
+            margin: auto;
+            // bottom: 0px;
+          }
+        }
+        .send-form{
+          // display: table-cell;
+          float: left;
+          text-align: center;
+          height: 100%; 
+          font-size: 16px;
+          line-height: 50px;
+          margin-left: 50px;
+          width: 100px;
+          background-color: #38AEF0;
+          color: white;
+        }
+      }
+    }
+  }
+}
