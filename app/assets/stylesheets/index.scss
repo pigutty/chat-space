@@ -11,11 +11,8 @@
  }
 
 .wrapper{
-  // display: table;
   width: 100vw;
   .left-content{
-    // display: table-cell;
-    // height: 821px;
     width: 300px;
     padding-right: 0px;
     padding-left: 0px;
@@ -32,7 +29,6 @@
       padding-right: 20px;
       box-sizing: border-box;
         a {
-          // display: inline;
           font-size: 16px;
           color: #ffffff;
           font-weight: bold;
@@ -41,7 +37,6 @@
           display: flex;
           height: 24px;
           box-sizing: border-box;
-          // display: inline;
           li.new-group,li.user-setting {
             margin-left: 0.3rem;
             box-sizing: border-box;
@@ -75,7 +70,6 @@
     }
   }
   .right-content{
-    // display: table-cell;
     float: left;
     width: calc(100vw - 300px);
     padding-top: 20px;
@@ -84,7 +78,6 @@
       padding-left: 40px;
       padding-right: 40px;
       height: 100px;
-      // width: 100%;
       border-bottom: solid #eeeeee;
       .group-information{
         float: left;
@@ -117,7 +110,6 @@
       padding-left: 40px;
       padding-right: 40px;
       height: calc(100vh - 100px);
-      // width: 100%;
       .content{
         padding-top: 40px;
         .user-name2{
@@ -145,7 +137,6 @@
       height: 90px;
       background-color: #ddd;
       .form{
-        // display: table;
         width: calc(100% - 100px);
         height: 50px;
         position: absolute;
@@ -153,7 +144,6 @@
         top: 20px;
         box-sizing: border-box;
         .message-form{
-          // display: table-cell;
           box-sizing: border-box;
           float: left;
           width: calc(100% - 150px);
@@ -175,11 +165,9 @@
             top: 10px;
             bottom: 10px;
             margin: auto;
-            // bottom: 0px;
           }
         }
         .send-form{
-          // display: table-cell;
           float: left;
           text-align: center;
           height: 100%; 
