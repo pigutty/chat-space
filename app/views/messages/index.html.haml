@@ -33,6 +33,7 @@
       %form.form
         %div.message-form
           %input{ type: "text",placeholder: "type a new message"}
-          %label.upload-label{for: "upload-icon"}
+          %label.upload-label
             %i.fa.fa-image
+            %input{ type: "file"}
         %input.send-form{type: "submit"}
