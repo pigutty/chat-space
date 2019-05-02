@@ -23,11 +23,12 @@
         %div.group-name-on-right group-name
         %div.member-list member
       %a.edit-button edit
-    %div.right-middle-content
-      %div.content
-        %div.user-name user-name
-        %div.date date
-        %div.text text
+    .right-middle-content
+      = render @messages
+      -# %div.content
+      -#   %div.user-name user-name
+      -#   %div.date date
+      -#   %div.text text
     %div.right-bottom-content
       .form
         = form_for [@group, @message] do |f|
@@ -37,3 +38,5 @@
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'form__submit'
+
+
