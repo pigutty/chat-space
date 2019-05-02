@@ -1,5 +1,4 @@
 !!!
-%header.message__header グループを作成しました
 
 %div.wrapper
   %div.left-content
@@ -30,10 +29,11 @@
         %div.date date
         %div.text text
     %div.right-bottom-content
-      %form.form
-        %div.message-form
-          %input{ type: "text",placeholder: "type a new message"}
-          %label.upload-label
-            %i.fa.fa-image
-            %input{ type: "file"}
-        %input.send-form{type: "submit"}
+      .form
+        = form_for [@group, @message] do |f|
+          %div.input-box
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            = f.label :image, class: 'form__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'
