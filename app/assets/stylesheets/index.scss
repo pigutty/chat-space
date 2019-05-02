@@ -1,48 +1,51 @@
 .wrapper{
-  .left-content{
+  .side-bar{
     width: 300px;
     float: left;
-    .left-top-content{
+    .header{
       justify-content: space-between;
       display: flex;
       height: 100px;
-      background-color: #253141;
+      background-color: $side_blue_dark;
       padding-top: 35px;
       padding-left: 20px;
       padding-right: 20px;
       box-sizing: border-box;
-        p {
-          font-size: 16px;
-          color: #ffffff;
+        &__name {
+          font-size: $side_header_font;
+          color: $white;
           font-weight: bold;
         }
-        ul.user-menu {
+        &__lists {
           display: flex;
-          li.new-group,li.user-setting {
+          li {
             margin-left: 0.3rem;
             box-sizing: border-box;
             display: list-item;
             height: 100%;
-            color: white;
+          }
+          .icon{
+            color: $white;
+            font-size: $side_header_font;
           }
         }
     }
-    .left-bottom-content{
-      background-color: #2f3e51;
+    .groups{
+      background-color: $side_blue_light;
       height: calc(100vh - 100px);
       width: 100%;
       .group{
         padding: 20px;
-        .group-name-on-left {
+        &__name {
           font-size: 15px;
           font-weight: bold;
-          color: #ffffff;
+          color: $white;
         }
-        .alert{
+        &__message{
           padding-top: 5px;
           font-size: 11px;      
           font-weight: bold;
-          color: #ffffff;
+          color: $white;
         }
       }
     }
@@ -50,6 +53,7 @@
   .right-content{
     float: left;
     width: calc(100vw - 300px);
+    height: 100vh;
     .right-top-content{
       box-sizing: border-box;
       padding-left: 40px;

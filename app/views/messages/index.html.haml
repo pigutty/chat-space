@@ -1,21 +1,7 @@
 !!!
 
-%div.wrapper
-  %div.left-content
-    %div.left-top-content
-      %p user-name
-      %ul.user-menu
-        %li.new-group
-          %a
-            %i.fa.fa-edit
-        %li.user-setting
-          %a
-            %i.fa.fa-cog
-
-    %div.left-bottom-content
-      %div.group
-        %div.group-name-on-left group-name
-        %div.alert 注意
+.wrapper
+  = render 'devise/shared/side_bar'
 
   %div.right-content
     %div.right-top-content
@@ -25,14 +11,11 @@
       %a.edit-button edit
     .right-middle-content
       = render @messages
-      -# %div.content
-      -#   %div.user-name user-name
-      -#   %div.date date
-      -#   %div.text text
-    %div.right-bottom-content
+
+    .right-bottom-content
       .form
         = form_for [@group, @message] do |f|
-          %div.input-box
+          .input-box
             = f.text_field :content, class: 'form__message', placeholder: 'type a message'
             = f.label :image, class: 'form__image' do
               = fa_icon 'picture-o', class: 'icon'
