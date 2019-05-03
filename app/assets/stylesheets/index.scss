@@ -1,55 +1,4 @@
 .wrapper{
-  .side-bar{
-    width: 300px;
-    float: left;
-    .header{
-      justify-content: space-between;
-      display: flex;
-      height: 100px;
-      background-color: $side_blue_dark;
-      padding-top: 35px;
-      padding-left: 20px;
-      padding-right: 20px;
-      box-sizing: border-box;
-        &__name {
-          font-size: $side_header_font;
-          color: $white;
-          font-weight: bold;
-        }
-        &__lists {
-          display: flex;
-          li {
-            margin-left: 0.3rem;
-            box-sizing: border-box;
-            display: list-item;
-            height: 100%;
-          }
-          .icon{
-            color: $white;
-            font-size: $side_header_font;
-          }
-        }
-    }
-    .groups{
-      background-color: $side_blue_light;
-      height: calc(100vh - 100px);
-      width: 100%;
-      .group{
-        padding: 20px;
-        &__name {
-          font-size: 15px;
-          font-weight: bold;
-          color: $white;
-        }
-        &__message{
-          padding-top: 5px;
-          font-size: 11px;      
-          font-weight: bold;
-          color: $white;
-        }
-      }
-    }
-  }
   .right-content{
     float: left;
     width: calc(100vw - 300px);
@@ -73,7 +22,7 @@
             padding-top: 15px;
           }
         }
-      a.edit-button{
+      .edit-button{
           float: right;
           margin-top: 30px;
           height: 40px;
@@ -83,6 +32,7 @@
           text-align: center;
           padding-left: 20px;
           padding-right: 20px;
+          text-decoration: none;
         }
     }
     .right-middle-content{
@@ -92,21 +42,25 @@
       padding-right: 40px;
       .content{
         padding-top: 40px;
-        .content__user-name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434a54;
-          display: inline;
+        &__header{
+          &__user-name{
+            font-size: 16px;
+            font-weight: bold;
+            color: #434a54;
+            display: inline;
+          }
+          &__message__date{
+            font-size: 12px;
+            color: #999999;
+            display: inline;
+            vertical-align: top;
+          }
         }
-        .content__message__date{
-          font-size: 12px;
-          color: #999999;
-          display: inline;
-          vertical-align: top;
+        &__message__text{
+            font-size: 14px;
+            color: #434a54;
         }
-        .content__message__text{
-          font-size: 14px;
-          color: #434a54;
+        &__message__image{
         }
       }
     }

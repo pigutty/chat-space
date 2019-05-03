@@ -3,12 +3,17 @@
 .wrapper
   = render 'devise/shared/side_bar'
 
-  %div.right-content
-    %div.right-top-content
-      %div.group-information
-        %div.group-name-on-right group-name
-        %div.member-list member
-      %a.edit-button edit
+  .right-content
+    .right-top-content
+      .group-information
+        .group-name-on-right
+          = @group.name
+        .member-list
+          Member:
+          - @group.users.each do |u|
+            = u.name
+      = link_to edit_group_path(@group), class: 'edit-button' do
+        edit
     .right-middle-content
       = render @messages
 
