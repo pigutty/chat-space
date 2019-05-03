@@ -1,0 +1,43 @@
+!!!
+<<<<<<< HEAD
+%header.header グループを作成しました
+=======
+%header.message__header グループを作成しました
+>>>>>>> 1669085442edb0b6c58d98151401b28e32e62d82
+
+%div.wrapper
+  %div.left-content
+    %div.left-top-content
+      %p user-name
+      %ul.user-menu
+        %li.new-group
+          %a
+            %i.fa.fa-edit
+        %li.user-setting
+          %a
+            %i.fa.fa-cog
+
+    %div.left-bottom-content
+      %div.group
+        %div.group-name-on-left group-name
+        %div.alert 注意
+
+  %div.right-content
+    %div.right-top-content
+      %div.group-information
+        %div.group-name-on-right group-name
+        %div.member-list member
+      %a.edit-button edit
+    %div.right-middle-content
+      %div.content
+        %div.user-name user-name
+        %div.date date
+        %div.text text
+    %div.right-bottom-content
+      %form.form
+        %div.message-form
+          %input{ type: "text",placeholder: "type a new message"}
+          %label.upload-label
+            %i.fa.fa-image
+            %input{ type: "file"}
+        %input.send-form{type: "submit"}
