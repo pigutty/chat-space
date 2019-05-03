@@ -13,10 +13,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-<<<<<<< HEAD
-    params.require(:user).permit(:name, :email)
-=======
     params.require(:user).permit(:id, :name, :email)
->>>>>>> 1669085442edb0b6c58d98151401b28e32e62d82
   end
 end

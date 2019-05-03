@@ -2,22 +2,18 @@
   .header
     %h3.header__name
       = current_user.name
-<<<<<<< HEAD
       ユーザーネーム
     %ul.header__lists
       %li.list
         = link_to do
-=======
     %ul.header__lists
       %li.list
         = link_to new_group_path do
->>>>>>> 1669085442edb0b6c58d98151401b28e32e62d82
           = fa_icon 'pencil-square-o', class: 'icon'
       %li.list
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: 'icon'
   .groups
-<<<<<<< HEAD
     .group
       .group__name
         グループ名
@@ -33,7 +29,6 @@
         グループ名
       .group__message
         新着メッセージ
-=======
     - current_user.groups.each do |group|
       .group
         = link_to group_messages_path(group) do
@@ -41,4 +36,3 @@
             = group.name
           .group__message
             メッセージはまだありません。
->>>>>>> 1669085442edb0b6c58d98151401b28e32e62d82

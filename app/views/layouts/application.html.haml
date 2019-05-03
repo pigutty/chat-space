@@ -4,15 +4,8 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ChatSpace
     = csrf_meta_tags
-<<<<<<< HEAD
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    -# = render 'layouts/notifications'
-=======
     = stylesheet_link_tag    'application', media: 'all', data:{ turbolinks:{ track: 'reload'}}
     = javascript_include_tag 'application', data:{ turbolinks: { track: 'reload'}}
   %body
     = render 'layouts/notifications'
->>>>>>> 1669085442edb0b6c58d98151401b28e32e62d82
     = yield
