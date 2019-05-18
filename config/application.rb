@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ChatSpace
  class Application < Rails::Application
+  config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   config.action_view.field_error_proc = Proc.new do |html_tag, instance| 
     html_tag
   end
