@@ -1,9 +1,7 @@
 $(function(){
   function buildHTML(message){
     var image = "";
-    if (message.image !== null) {
-      image = `<img src="${message.image}" class="content__message__image"></img>`
-    }
+    image = (message.image !== null)?  `<img src="${message.image}" class="content__message__image"></img>` : "" ;
     var html = `<div class="message">
                   <div class="content">
                     <div class="content__header">
