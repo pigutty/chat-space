@@ -1,18 +1,24 @@
 $(function(){
   function buildHTML(message){
-    var html = `<p>
-                  <strong>
-                    <a href=/groups/${group.user_id}/messages>${message.user_name}</a>
-                    :
-                  </strong>
-                  ${message.text}
-                </p>`
+    var image = "";
+    if (message.image !== null) {
+      image = `<img src="${message.image}" class="content__message__image"></img>`
+    }
+    var html = `<div class="message">
+                  <div class="content">
+                    <div class="content__header">
+                      <div class="content__header__user-name">${message.user_name}</div>
+                      <div class="content__header__message__date">${message.created_at}</div>
+                    </div>
+                    <p class="content__message__text">${message.content}</p>
+                    ${image}
+                  </div>
+                </div>`
     return html;
   }
   $('#new_message').on('submit',function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    console.log(this);
     var url = $(this).attr('action');
     $.ajax({
       url: url,
@@ -24,11 +30,15 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.message').append(html);
+      $('.right-middle-content').append(html);
+      var height = $('.message').eq(-1).offset().top;
+      $('.right-middle-content').animate({scrollTop:height});
       $('#message_content').val('');
+      $('.hidden').val('');
     })
     .fail(function(){
       alert('error');
     });
+    return false;
   });
 });

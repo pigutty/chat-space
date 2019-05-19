@@ -1,52 +1,56 @@
-.side-bar{
-  width: 300px;
-  float: left;
-  .header{
-    justify-content: space-between;
-    display: flex;
-    height: 100px;
-    background-color: $side_blue_dark;
-    padding-top: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-      &__name {
-        font-size: $side_header_font;
-        color: $white;
-        font-weight: bold;
-      }
-      &__lists {
-        display: flex;
-        li {
-          margin-left: 0.3rem;
-          box-sizing: border-box;
-          display: list-item;
-          height: 100%;
-        }
-        .icon{
-          color: $white;
-          font-size: $side_header_font;
-        }
-      }
-  }
-  .groups{
-    background-color: $side_blue_light;
-    height: calc(100vh - 100px);
-    width: 100%;
-    .group{
-      text-decoration: none;
-      &__tag{
-        padding: 20px;
+.wrapper{
+  height: 100%;
+  .side-bar{
+    width: 300px;
+    float: left;
+    .header{
+      justify-content: space-between;
+      display: flex;
+      height: 100px;
+      background-color: $side_blue_dark;
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
         &__name {
-          font-size: 15px;
-          font-weight: bold;
+          font-size: $side_header_font;
           color: $white;
+          font-weight: bold;
         }
-        &__message{
-          padding-top: 5px;
-          font-size: 11px;      
-          font-weight: bold;
-          color: $white;
+        &__lists {
+          display: flex;
+          li {
+            margin-left: 0.3rem;
+            box-sizing: border-box;
+            display: list-item;
+            height: 100%;
+          }
+          .icon{
+            color: $white;
+            font-size: $side_header_font;
+          }
+        }
+    }
+    .groups{
+      overflow: scroll;
+      background-color: $side_blue_light;
+      height: calc(100vh - 100px);
+      width: 100%;
+      .group{
+        text-decoration: none;
+        &__tag{
+          padding: 20px;
+          &__name {
+            font-size: 15px;
+            font-weight: bold;
+            color: $white;
+          }
+          &__message{
+            padding-top: 5px;
+            font-size: 11px;      
+            font-weight: bold;
+            color: $white;
+          }
         }
       }
     }
