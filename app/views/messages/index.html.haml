@@ -19,7 +19,7 @@
 
     .right-bottom-content
       .form
-        = form_for [@group, @message] do |f|
+        = form_for [@group, @message], remote: true do |f|
           .input-box
             = f.text_field :content, class: 'form__message', placeholder: 'type a message'
             = f.label :image, class: 'form__image' do
