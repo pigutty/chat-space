@@ -31,7 +31,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.right-middle-content').append(html);
-      var height = $('.message').eq(-1).offset().top;
+      var height = $('.right-middle-content')[0].scrollHeight;
       $('.right-middle-content').animate({scrollTop:height});
       $('#message_content').val('');
       $('.hidden').val('');
