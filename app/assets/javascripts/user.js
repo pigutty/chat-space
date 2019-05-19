@@ -72,9 +72,9 @@ $(function() {
 
   $(document).on("click", ".user-search-add", function (){
     $('#chat-group-users').val();
-    var userId = $(this).data('user_id');
-    var userName = $(this).data('user-name');
-    addUser(userId, userName);
+    var user_id = $(this).attr('data-user-id');
+    var user_name = $(this).attr('data-user-name');
+    addUser(user_id, user_name);
     $(this).parent().remove();
   });
 
