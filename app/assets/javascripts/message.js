@@ -15,10 +15,14 @@ $(function(){
     return html;
   }
 
+  var url = window.location.href;
+
   var reloadMessages = function() {
-    last_message_id = $('.message').eq(-1).attr('data-id') 
+    last_message_id = $('.message').eq(-1).attr('data-id');
+    reload_url_pattern = /messages/;
+    result = url.replace(reload_url_pattern,'api/messages');
     $.ajax({
-      url: '/groups/1/api/messages',
+      url: result,
       type: "GET",
       dataType: 'json',
       data: { last_id: last_message_id },
@@ -37,7 +41,7 @@ $(function(){
       $('.right-middle-content').animate({scrollTop:height});
     })
     .fail(function(){
-      alert('自動更新に失敗しました');
+      console.log('自動更新に失敗しました');
     })
   };
 
@@ -62,12 +66,14 @@ $(function(){
       $('.hidden').val('');
     })
     .fail(function(){
-      alert('自動更新に失敗しました');
+      console.log('メッセージの送信に失敗しました');
     });
     return false;
   });
 
-  if (window.location.href.match("\/groups\/")){
+  var group_view_url_pattern = /\/groups\/\d+\/messages/;
+  var result = url.match(group_view_url_pattern);
+  if (result) {
     setInterval(reloadMessages, 5000);
   }
   else {
