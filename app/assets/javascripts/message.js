@@ -31,8 +31,7 @@ $(function(){
       $('.right-middle-content').append(html);
       var height = $('.right-middle-content')[0].scrollHeight;
       $('.right-middle-content').animate({scrollTop:height});
-      $('#message_content').val('');
-      $('.hidden').val('');
+      document.getElementById('new_message').reset();
     })
     .fail(function(){
       alert('error');
