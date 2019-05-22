@@ -1,14 +1,17 @@
 .wrapper{
+  height: 100%;
   .right-content{
     float: left;
     width: calc(100vw - 300px);
     height: 100vh;
     .right-top-content{
+      overflow: scroll;
       box-sizing: border-box;
       padding-left: 40px;
       padding-right: 40px;
       height: 100px;
       border-bottom: solid #eeeeee;
+      display: flex;
       .group-information{
         float: left;
           .group-name-on-right{
@@ -36,6 +39,9 @@
         }
     }
     .right-middle-content{
+      position: relative;
+      height: calc(100vh - 190px);
+      overflow: scroll;
       box-sizing: border-box;
       padding-top: 6px;
       padding-left: 40px;
@@ -60,15 +66,12 @@
             font-size: 14px;
             color: #434a54;
         }
-        &__message__image{
-        }
       }
     }
     .right-bottom-content{
+      position: absolute;
       box-sizing: border-box;
       width: calc(100% - 300px);
-      position: fixed;
-      bottom: 0;
       height: 90px;
       background-color: #ddd;
       padding: 20px 40px;
