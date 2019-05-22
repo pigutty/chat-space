@@ -1,7 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var image = "";
-    image = (message.image !== null)?  `<img src="${message.image}" class="content__message__image"></img>` : "" ;
+    var image = (message.image !== null)?  `<img src="${message.image}" class="content__message__image"></img>` : "" ;
     var html = `<div class="message">
                   <div class="content">
                     <div class="content__header">
@@ -31,8 +30,7 @@ $(function(){
       $('.right-middle-content').append(html);
       var height = $('.right-middle-content')[0].scrollHeight;
       $('.right-middle-content').animate({scrollTop:height});
-      $('#message_content').val('');
-      $('.hidden').val('');
+      document.getElementById('new_message').reset();
     })
     .fail(function(){
       alert('error');
