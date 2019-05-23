@@ -35,7 +35,6 @@ $(document).on('turbolinks:load', function() {
     }
 
     $("#user-search-field").on("keyup", function() {
-      console.log('確認');
       var input = $("#user-search-field").val();
       var inputs = input.split(" ").filter(function(a) { return a;});
       var newInputs = inputs.map(editElement);
