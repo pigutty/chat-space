@@ -2,8 +2,7 @@ class Api::MessagesController < ApplicationController
   before_action :set_group
   def index
     @message = Message.new
-    @messages = @group.messages.includes(:user)
-    @messages = @messages.where("id > ?", "last_id")
+    @messages = @group.messages.includes(:user).where("id > ?", "last_id")
   end
 
 
