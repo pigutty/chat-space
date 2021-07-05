@@ -1,70 +1,11 @@
-
-.header{
-   width: 100%;
-   background-color: #38AEF0;
-   height: 20px;
-   position: fixed;
-   text-align: center;
-   font-size: 15px;
-   line-height: 20px;
-   color: white;
- }
-
 .wrapper{
-  .left-content{
-    width: 300px;
-    padding-top: 20px;
-    float: left;
-    .left-top-content{
-      justify-content: space-between;
-      display: flex;
-      height: 100px;
-      background-color: #253141;
-      padding-top: 35px;
-      padding-left: 20px;
-      padding-right: 20px;
-      box-sizing: border-box;
-        p {
-          font-size: 16px;
-          color: #ffffff;
-          font-weight: bold;
-        }
-        ul.user-menu {
-          display: flex;
-          li.new-group,li.user-setting {
-            margin-left: 0.3rem;
-            box-sizing: border-box;
-            display: list-item;
-            height: 100%;
-            color: white;
-          }
-        }
-    }
-    .left-bottom-content{
-      background-color: #2f3e51;
-      height: calc(100vh - 100px);
-      width: 100%;
-      .group{
-        padding: 20px;
-        .group-name-on-left {
-          font-size: 15px;
-          font-weight: bold;
-          color: #ffffff;
-        }
-        .alert{
-          padding-top: 5px;
-          font-size: 11px;      
-          font-weight: bold;
-          color: #ffffff;
-        }
-      }
-    }
-  }
+  height: 100%;
   .right-content{
     float: left;
     width: calc(100vw - 300px);
-    padding-top: 20px;
+    height: 100vh;
     .right-top-content{
+      overflow: scroll;
       box-sizing: border-box;
       padding-left: 40px;
       padding-right: 40px;
@@ -83,7 +24,7 @@
             padding-top: 15px;
           }
         }
-      a.edit-button{
+      .edit-button{
           float: right;
           margin-top: 30px;
           height: 40px;
@@ -93,66 +34,77 @@
           text-align: center;
           padding-left: 20px;
           padding-right: 20px;
+          text-decoration: none;
         }
     }
     .right-middle-content{
+      position: relative;
+      height: calc(100vh - 190px);
+      overflow: scroll;
       box-sizing: border-box;
       padding-top: 6px;
       padding-left: 40px;
       padding-right: 40px;
       .content{
         padding-top: 40px;
-        .user-name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434a54;
-          display: inline;
+        &__header{
+          &__user-name{
+            font-size: 16px;
+            font-weight: bold;
+            color: #434a54;
+            display: inline;
+          }
+          &__message__date{
+            font-size: 12px;
+            color: #999999;
+            display: inline;
+            vertical-align: top;
+          }
         }
-        .date{
-          font-size: 12px;
-          color: #999999;
-          display: inline;
-          vertical-align: top;
-        }
-        .text{
-          font-size: 14px;
-          color: #434a54;
+        &__message__text{
+            font-size: 14px;
+            color: #434a54;
         }
       }
     }
     .right-bottom-content{
+      position: absolute;
       box-sizing: border-box;
       width: calc(100% - 300px);
-      position: fixed;
-      bottom: 0;
       height: 90px;
       background-color: #ddd;
       padding: 20px 40px;
       .form{
+        width: 100%;
         height: 50px;
         display: flex;
-        .message-form{
+        .new_message{
+          display: flex;
           width: 100%;
-          position: relative;
-          input[type=text]{
-            padding-left: 10px;
-            height: 100%;
+          .input-box{
             width: 100%;
-            box-sizing: border-box;
-            border-width: 0;
-          }
-          label{
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            cursor: pointer;
-            font-size: 1.3rem;
-            input {
-              display: none;
-            }
+            display: flex;
+            position: relative;
+              .form__message{
+                padding-left: 10px;
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                border-width: 0;
+              }
+              .form__image{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+                font-size: 1.3rem;
+                .hidden {
+                  display: none;
+                }
+              }
           }
         }
-        .send-form{
+        .form__submit{
           line-height: 50px;
           margin-left: 15px;
           background-color: #38AEF0;

@@ -1,39 +1,30 @@
 !!!
-%header.header グループを作成しました
 
-%div.wrapper
-  %div.left-content
-    %div.left-top-content
-      %p user-name
-      %ul.user-menu
-        %li.new-group
-          %a
-            %i.fa.fa-edit
-        %li.user-setting
-          %a
-            %i.fa.fa-cog
+.wrapper
+  = render 'devise/shared/side_bar'
 
-    %div.left-bottom-content
-      %div.group
-        %div.group-name-on-left group-name
-        %div.alert 注意
+  .right-content
+    .right-top-content
+      .group-information
+        .group-name-on-right
+          = @group.name
+        .member-list
+          Member:
+          - @group.users.each do |u|
+            = u.name
+      = link_to edit_group_path(@group), class: 'edit-button' do
+        edit
+    .right-middle-content
+      = render @messages
 
-  %div.right-content
-    %div.right-top-content
-      %div.group-information
-        %div.group-name-on-right group-name
-        %div.member-list member
-      %a.edit-button edit
-    %div.right-middle-content
-      %div.content
-        %div.user-name user-name
-        %div.date date
-        %div.text text
-    %div.right-bottom-content
-      %form.form
-        %div.message-form
-          %input{ type: "text",placeholder: "type a new message"}
-          %label.upload-label
-            %i.fa.fa-image
-            %input{ type: "file"}
-        %input.send-form{type: "submit"}
+    .right-bottom-content
+      .form
+        = form_for [@group, @message], remote: true do |f|
+          .input-box
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            = f.label :image, class: 'form__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'
+
+
